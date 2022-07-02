@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.pagination div{
+    font-size: 13px;
+    width: 35px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #e7e7e7;
+    padding: 5px;
+}
+.pagination div:hover{
+    background-color: #8dc647;
+}
+.pagination div[disabled]{
+    background-color: #8dc647;
+}
