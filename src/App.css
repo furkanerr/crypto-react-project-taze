@@ -2,7 +2,8 @@
   text-align: center;
 }
 a{
-  text-decoration: none;
+  text-decoration: none!important;
+  color:inherit
 }
 .App-logo {
   height: 40vmin;
