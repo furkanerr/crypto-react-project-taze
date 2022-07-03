@@ -7,8 +7,7 @@ import { Link } from 'react-router-dom'
 const Sidebar = () => {
 
     const { selectedCoins,removeCoin} = useCoin()
-         //   debugger
-        console.log(selectedCoins)
+      
 
   return (
     <div className={styles.container}>
@@ -17,7 +16,7 @@ const Sidebar = () => {
             selectedCoins.map(coin => (
                 <>
                  <span onClick={()=>
-                  {  console.log(coin.coin.id)
+                  {  
                     removeCoin(coin.coin.id)}} >X</span>
                 <Link to={`/coinDetail/${coin.coin.id}`}>
                

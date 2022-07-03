@@ -22,7 +22,7 @@ const CoinCard = ({
       style={selectedCoins.map(coin=>coin.coin.id).includes(coinId)?{color:'#f9c826'}:{backgroundColor:'white'}}
       onClick={()=>{
         addCoin(coinId)
-        console.log(selectedCoins)
+      
       }}
       />
       </div>

@@ -12,7 +12,7 @@ const Header = () => {
     <div className={styles.openClosedSideBar} onClick={()=>
       {
         setOpenSideBar(!openSideBar)
-        console.log(openSideBar)
+       
       }}>View List</div>
   </div>
   )
