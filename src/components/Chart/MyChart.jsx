@@ -52,4 +52,4 @@ const MyChart = ({ data, day }) => {
   );
 };
 
-export default MyChart;
+export default React.memo(MyChart);
