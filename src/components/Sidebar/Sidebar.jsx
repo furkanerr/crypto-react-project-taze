@@ -17,7 +17,7 @@ const Sidebar = () => {
                 <>
                  <span onClick={()=>
                   {  
-                    removeCoin(coin.coin.id)}} >X</span>
+                    removeCoin(coin.coin.id)}} >Sil</span>
                 <Link to={`/coinDetail/${coin.coin.id}`}>
                
                 <ViewList coin={coin.coin} />

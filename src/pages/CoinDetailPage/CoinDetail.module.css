@@ -46,3 +46,17 @@
     position: absolute;
     width: 20%;
 }
+
+@media screen and (max-width: 600px) {
+    .Infos{
+        flex-direction: column;
+    }
+    .detailCard{
+        width: 70%;
+    }
+    .SideBarContainer{
+        width: 25%;
+        font-size: 9px;
+    }
+}
+    
