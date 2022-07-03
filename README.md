@@ -1,4 +1,4 @@
-Live:https://crypto-app-furkaner.netlify.app/coinDetail/bitcoin
+Live:https://crypto-app-furkaner.netlify.app/
 --------------
 * State managament handled by Context API.
 * React.memo used to avoid re-renders.
