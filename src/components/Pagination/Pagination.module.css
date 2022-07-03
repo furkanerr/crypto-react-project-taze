@@ -4,6 +4,7 @@
     align-items: center;
     width: 100%;
     height: 100%;
+    margin: 15px;
 }
 .pagination{
     display: flex;
@@ -19,6 +20,12 @@
     background-color: #fff;
     border: 1px solid #e7e7e7;
     padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 1px;
 }
 .pagination div:hover{
     background-color: #8dc647;

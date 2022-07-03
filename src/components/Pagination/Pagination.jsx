@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Pagination.module.css";
+import { Line } from "react-chartjs-2";
 const Pagination = ({ setPage, page }) => {
   return (
     <div className={styles.container}>
