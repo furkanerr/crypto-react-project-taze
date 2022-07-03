@@ -21,7 +21,7 @@ export default class Api {
         }
 
 }
-static async getCoinHistory(coinId,days=30) {
+static async getCoinHistory(coinId,days=365) {
     try {
         return await axios.get(`https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=${days}`);
     } catch (error) {
