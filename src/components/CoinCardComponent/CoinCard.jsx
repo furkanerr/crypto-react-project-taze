@@ -3,6 +3,7 @@ import styles from "./CoinCard.module.css";
 import {Link} from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { useCoin } from "../../context/coinContext";
 const CoinCard = ({
   coinImage,
   coinName,
@@ -11,12 +12,19 @@ const CoinCard = ({
   volume,
   coinId
 }) => {
-  
+  const {addCoin,selectedCoins} = useCoin()
   return (
     
     <div className={styles.Card}>
       <div className={styles.addToTheFavorites}>
-      <FontAwesomeIcon icon={faStar} style={{color:'#ffd43b'}}/>
+      <FontAwesomeIcon 
+      icon={faStar}
+      style={selectedCoins.map(coin=>coin.coin.id).includes(coinId)?{color:'#f9c826'}:{backgroundColor:'white'}}
+      onClick={()=>{
+        addCoin(coinId)
+        console.log(selectedCoins)
+      }}
+      />
       </div>
       <Link to={`/coinDetail/${coinId}`} >
         <div className={styles.coinImage}>
@@ -39,5 +47,5 @@ const CoinCard = ({
  
   );
 };
-
-export default CoinCard;
+// arama yapılırken tekrar renderi etmeyi engellemek için 
+export default React.memo(CoinCard);
