@@ -1,3 +1,9 @@
+Live:https://crypto-app-furkaner.netlify.app/coinDetail/bitcoin
+--------------
+* State managament handled by Context API.
+* React.memo used to avoid re-renders.
+
+-------
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
