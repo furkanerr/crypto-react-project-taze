@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-// create snd service class and export it
+
 export default class Api {
   
     
