@@ -6,29 +6,25 @@ import Pagination from "../../components/Pagination/Pagination";
 
 import Header from "../../components/Header/Header";
 import { MoonLoader } from "react-spinners";
+import { useCoin } from "../../context/coinContext";
+import Sidebar from "../../components/Sidebar/Sidebar";
 const HomePage = () => {
-  const [coins, setCoins] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [page, setPage] = useState(1);
-  const [isLoading, setIsLoading] = useState(true);
-  const fetchData = async () => {
-    const response = await Api.getAllCoins(page);
-    setCoins(response.data);
-    setIsLoading(false);
-  };
+  const [searchTerm, setSearchTerm] = useState("");
+  const { openSideBar, coins, isLoading, setPage,page } = useCoin();
 
-  useEffect(() => {
-    fetchData();
-  }, [page]);
-
-  let filteredCoins = coins.filter(coin => coin.name.toLowerCase().includes(searchTerm.toLowerCase()));
-
+  let filteredCoins = coins.filter((coin) =>
+    coin.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <div className={styles.container}>
       <Header />
       <div className={styles.searchBar}>
-        <input type="text" placeholder="Search..." onChange={(e)=>setSearchTerm(e.target.value)}/>
+        <input
+          type="text"
+          placeholder="Search..."
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
       </div>
       {isLoading ? (
         <MoonLoader color="#7b9f05" />
@@ -51,6 +47,11 @@ const HomePage = () => {
       <div className={styles.pagination}>
         <Pagination setPage={setPage} page={page} />
       </div>
+       {/* positin left ile yok ederek re-renderın önüne geçtik */}
+        <div className={styles.SideBarContainer}style={openSideBar?{left:'-1000px'}:{left:'0'}}>
+          <Sidebar />
+        </div>
+      
     </div>
   );
 };
