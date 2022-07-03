@@ -7,12 +7,17 @@ import Header from "../../components/Header/Header";
 import MyChart from "../../components/Chart/MyChart";
 import { times } from "../../utils/times";
 import { MoonLoader } from "react-spinners";
+import Sidebar from "../../components/Sidebar/Sidebar";
+import { useCoin } from "../../context/coinContext";
+
 const CoinDetail = () => {
   const { id } = useParams();
   const [coin, setCoin] = useState([]);
   const [coinHistory, setCoinHistory] = useState([]);
   const [days, setDays] = useState(365);
   const [isLoading, setIsLoading] = useState(true);
+  const { openSideBar } = useCoin();
+
   const fetchData = async () => {
     const response = await Api.getCoin(id);
     setCoin(response.data);
@@ -34,6 +39,8 @@ const CoinDetail = () => {
   return (
     <div className={styles.container}>
       <Header />
+     
+
       <div className={styles.Infos}>
         {isLoading ? (
           <MoonLoader color="#7b9f05" />
@@ -66,8 +73,14 @@ const CoinDetail = () => {
           </>
         )}
       </div>
+      {/* positin left ile yok ederek re-renderın önüne geçtik */}
+     
+        <div className={styles.SideBarContainer} style={openSideBar?{left:'-1000px'}:{left:'0'}}>  
+          <Sidebar />
+        </div>
+   
     </div>
   );
 };
-
+ 
 export default CoinDetail;
