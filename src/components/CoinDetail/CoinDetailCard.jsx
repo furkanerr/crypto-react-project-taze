@@ -31,6 +31,7 @@ coin
         </div>
       </div>
       <div className={styles.desc}>{parse(coin?.description?.en || '')}</div>
+      {/* string içinde html kodlarını parse etmek için kullanılır. */}
       
     </div>
   );
