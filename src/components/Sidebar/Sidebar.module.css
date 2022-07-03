@@ -1,0 +1,23 @@
+.container{
+ width: 100%;
+}
+.coinCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 75%);
+}
+.coinCard span{
+    font-size: 12px;
+    color: red;
+ 
+    cursor: pointer;
+}
+.coinCard span:hover{
+  transform: scale(1.15);
+}
