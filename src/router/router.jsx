@@ -13,7 +13,7 @@ function Routers() {
 
      <Routes>
         <Route path="/" element={<HomePage/>} />
-        <Route path='/coinDetail:id' element={<CoinDetail/>} />
+        <Route exact path='/coinDetail/:id' element={<CoinDetail/>} />
      </Routes>
     )
   }
