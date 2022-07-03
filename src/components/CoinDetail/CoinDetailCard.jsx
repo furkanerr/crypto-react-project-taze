@@ -30,7 +30,7 @@ coin
           <div className={styles.Low}>${coin?.market_data?.low_24h?.usd}</div>
         </div>
       </div>
-      <div className={styles.desc}>{parse(coin?.description?.en || 'Loading...')}</div>
+      <div className={styles.desc}>{parse(coin?.description?.en || '')}</div>
       
     </div>
   );
