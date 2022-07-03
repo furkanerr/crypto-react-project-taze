@@ -16,8 +16,8 @@ const MyChart = ({ data, day }) => {
         radius: 1,
       },
     },
+    
   };
-
   return (
     <div>
       <Line
