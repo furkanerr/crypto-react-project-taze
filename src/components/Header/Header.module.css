@@ -1,0 +1,23 @@
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.openClosedSideBar{
+    width: 50px;
+    background-color: crimson;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.openClosedSideBar:hover{
+    background-color: #c6b347;
+    color:white
+}
